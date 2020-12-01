@@ -194,6 +194,7 @@ def preprocess_turn_off(params):
 
 
 def load_turn_off_profile(light_entity_id, off_params):
+    """Load transition data from light profile when turning light off."""
     default_profile = Profiles.get_default(light_entity_id)
     if default_profile is not None:
         params = {ATTR_PROFILE: default_profile}
